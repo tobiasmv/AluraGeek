@@ -1,0 +1,80 @@
+:root {
+    
+    --color_1: #232323;
+    --color_2: #808080;
+    --color_3: #fbfbfb;
+    --btn_blue:#2A7AE4;
+    --background_1: #E5E5E5;
+    --background_2:  #cdcdcd;
+    --background_form: #eaf2fd;
+    --shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.2);
+
+
+
+
+
+
+    --Poppins: 'Poppins', sans-serif;
+    --Rubik: 'Rubik', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+    body {
+        background: var(--background_1);
+        font-family: var(--Poppins);
+    }
+
+    .material-symbols-outlined{
+        font-size: 1.5rem;
+        color:var(--color_1)
+    }
+    .white{
+        color:var(--color_3)
+    }
+    .container {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        display: flex;
+    }
+.column{
+    flex-direction: column;
+}
+.row{
+    flex-direction: row;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 45rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.card__title {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.column {
+    flex-direction: column;
+}
+
+
+    @media screen and (min-width: 768px){
+    .material-symbols-outlined{
+        font-size: 1.8rem;
+      
+    }}

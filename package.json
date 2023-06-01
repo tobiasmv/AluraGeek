@@ -1,0 +1,19 @@
+{
+  "name": "alurageek",
+  "version": "1.0.0",
+  "description": "Historia",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiasmv/AluraGeek.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobiasmv/AluraGeek/issues"
+  },
+  "homepage": "https://github.com/tobiasmv/AluraGeek#readme"
+}

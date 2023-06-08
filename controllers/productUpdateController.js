@@ -1,4 +1,5 @@
-import { productServices } from "../services/productServices.js";
+
+ import { productServices } from "../services/productServices.js";
 
 const container = document.querySelector("[data-allProducts]");
 
@@ -21,10 +22,10 @@ productServices
             </button>
           </div>
         </div>
-        <div class="card__data">
-          <h2 class="card__title">${name}</h2>
-          <h2>Precio: ${price}</h2>
-          <a href="product${id}.html" class="blue_anchor">
+        <div class="product__data">
+          <h2 class="data__title">${name}</h2>
+          <h2 class="flex row centered"><span class="material-symbols-outlined price">attach_money</span>${price}</h2>
+          <a href="product${id}.html" class="link-blue">
             <button class="btn">ver producto</button>
           </a>
           <p data-description>${description}</p>

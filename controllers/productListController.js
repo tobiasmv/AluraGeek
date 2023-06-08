@@ -43,7 +43,7 @@ function generateCategoryDiv(category, products) {
     <div class="product__data">
       <h2 class="data__title">${name}</h2>
       <h2 class="flex row centered"><span class="material-symbols-outlined price">attach_money</span>${price}</h2>
-      <a href="product.html?id=${id}" class="blue_anchor"><button class="btn" data-buttonView >ver producto</button></a>
+      <a href="product.html?id=${id}" class="link-blue"><button class="btn" data-buttonView >ver producto</button></a>
     </div>
   </div>
   `;

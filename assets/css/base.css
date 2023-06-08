@@ -81,7 +81,12 @@ margin: 0  auto;padding:3px;}
     box-shadow: var(--shadow);
 
 }
-
+.link-blue{
+    font-family: var(--Rubik);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color_8);
+}
 
 
 .container p {

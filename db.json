@@ -4,7 +4,7 @@
       "name": "vino",
       "ImgUrl": "",
       "price": "1200",
-      "id": "",
+      "id": "1",
       "alt": "",
       "category": "bebidas",
       "description": ""
@@ -19,37 +19,12 @@
       "description": ""
     },
     {
-      "name": "fideos",
-      "ImgUrl": "",
-      "price": "700",
-      "id": "2",
-      "alt": "",
-      "category": "alimentos",
-      "description": ""
-    },
-    {
-      "name": "Xbox Series S",
-      "ImgUrl": "url",
-      "price": "132000",
-      "category": "consolas",
-      "description": "xbox series s",
-      "id": "WPPx8--"
-    },
-    {
-      "name": "nintendo",
-      "ImgUrl": "..//consolas-1.png",
-      "price": "135000",
-      "id": "393c7dd6-4b57-41f8-a8d9-214681104bfb",
-      "category": "consolas",
-      "description": "NINTENDO SWICTCH"
-    },
-    {
-      "name": "joystick xbox series s",
-      "ImgUrl": "..//assets/consolas-1.png",
-      "price": "33000",
-      "id": "2c028ece-abfc-4a06-adb3-510859e2f7c7",
-      "category": "joystick",
-      "description": "juystick"
+      "name": "storm trooper ",
+      "ImgUrl": "https://raw.githubusercontent.com/tobiasmv/AluraGeek/d493f8ccf0bb755eecc4d3adbe589515018b6685/ImgUrl/2af26846110fb131c9617e7af1a8d724.jpg",
+      "price": "9000",
+      "id": "f3b718f3-e4d7-4d2c-857d-3974e0fdb37f",
+      "category": "Star Wars",
+      "description": "stormtrroper nuevo"
     }
   ]
 }

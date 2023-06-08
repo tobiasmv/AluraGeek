@@ -1,34 +1,66 @@
 import { productServices } from "../services/productServices.js";
 
-const getURL = new URL(window.location);
+const container = document.querySelector("[data-allProducts]");
 
-const id = getURL.searchParams.get("id");
+productServices
+  .allProducts()
+  .then((allProducts) => {
+    allProducts.forEach((product) => {
+      const { id, name, ImgUrl, price, description } = product;
+      const productDiv = document.createElement('div');
+      productDiv.classList.add('product__card');
+      productDiv.innerHTML = `
+        <div class="product__img">
+          <img src="${ImgUrl}" alt="${name}">
+          <div class="icon__container">
+            <button class="btn btn_xs" data-id="${id}" data-type="edit">
+              <span class="material-symbols-outlined white">edit</span>
+            </button>
+            <button class="btn btn_xs" data-id="${id}" data-type="delete">
+              <span class="material-symbols-outlined white">delete</span>
+            </button>
+          </div>
+        </div>
+        <div class="card__data">
+          <h2 class="card__title">${name}</h2>
+          <h2>Precio: ${price}</h2>
+          <a href="product${id}.html" class="blue_anchor">
+            <button class="btn">ver producto</button>
+          </a>
+          <p data-description>${description}</p>
+        </div>
+      `;
 
-const inputImageUrl = document.querySelector("[data-url]");
-const inputNombre = document.querySelector("[data-nombre]");
-const inputPrecio = document.querySelector("[data-precio]");
-const inputDescripcion = document.querySelector("[data-descripcion]");
-
-productServices.editProduct(id).then((productdata) => {
-  inputImageUrl.setAttribute("src", productdata.imageUrl);
-  inputNombre.value = productdata.name;
-  inputPrecio.value = productdata.price;
-  inputDescripcion.value = productdata.description;
-});
-
-const formulario = document.querySelector("[data-form]");
-
-formulario.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-
-  productoServices
-    .alteraProducto(
-      id,
-      inputNombre.value,
-      inputPrecio.value,
-      inputDescripcion.value
-    )
-    .then(() => {
-      window.location.href = "../screens/index.html";
+      container.appendChild(productDiv);
     });
-});
+
+    const deleteBtn = document.querySelectorAll('[data-type="delete"]');
+    deleteBtn.forEach((deleteBtn) => {
+      deleteBtn.addEventListener('click', () => {
+        const productId = deleteBtn.dataset.id;
+        const productCard = deleteBtn.closest('.product__card');
+        productCard.remove();
+
+        productServices.productDelete(productId)
+          .then(() => {
+            alert('Producto eliminado correctamente');
+          })
+          .catch((error) => {
+            alert('Error al eliminar el producto', error);
+          });
+      });
+    });
+
+    const editBtn = document.querySelectorAll('[data-type="edit"]');
+    editBtn.forEach((editBtn) => {
+      editBtn.addEventListener('click', () => {
+        const productId = editBtn.dataset.id;
+        const editUrl = new URL('../screens/edit_product.html', window.location.href);
+        editUrl.searchParams.append('id', productId);
+        window.open(editUrl.href, '_blank');
+      });
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });

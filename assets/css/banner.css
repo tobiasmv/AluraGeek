@@ -1,0 +1,60 @@
+.banner {
+    background-image: url("../banner-image.png");
+    display: flex;
+    flex-direction: column;
+    height: 192px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.banner__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.banner p {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 2rem 0 .5rem;
+    line-height: 26px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #FFF;
+
+}
+
+.banner p:last-of-type {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 16px;
+}
+
+.banner a {
+    text-decoration: none;
+    color: unset;
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        height: 240px;
+    }
+
+    .banner p {
+        font-size: 2.2rem;
+        margin: 2rem 1rem 0;
+        line-height: 26px;
+        letter-spacing: 2px;
+
+    }
+
+    .banner p:last-of-type {
+        font-size: 14px;
+        margin: 0.2rem 1rem 0;
+    }
+
+}

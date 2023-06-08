@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="pruebas.css">
+</head>
+<body>
+  <header>
+    <button class="btn btn_l" data-loginOpen>Ingresar <span class="material-symbols-outlined">login</span></button>
+  </header>
+
+  <div class="menu">
+    <button class="btn btn_s" data-menuOpen>Menú</button>
+    <nav class="menu__nav">
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+      </ul>
+    </nav>
+    <button class="btn btn_s" data-menuClose>Cerrar Menú</button>
+  </div>
+
+  <div class="modal" data-modal>
+    <div class="login-form" data-loginForm>
+      <h2>Iniciar sesión</h2>
+      <input type="text" data-type="email" placeholder="Correo electrónico">
+      <input type="password" data-type="password" placeholder="Contraseña">
+      <button class="btn btn_l" data-loginBtn>Acceder</button>
+      <div class="error-message"></div>
+    </div>
+    <div class="loged__modal"></div>
+    <button class="btn btn_s" data-loginClose>Cerrar</button>
+  </div>
+
+  <script src="pruebas.js"></script>
+</body>
+</html>

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tobiasmv/AluraGeek/issues"
   },
-  "homepage": "https://github.com/tobiasmv/AluraGeek#readme"
+  "homepage": "https://github.com/tobiasmv/AluraGeek#readme",
+  "dependencies": {
+    "uuidv4": "^6.2.13"
+  }
 }

@@ -1,0 +1,34 @@
+ <!-- <div class="products__title">
+      <h2 class="products__category-title">Editar productos</h2>
+        <a class="blue_anchor" href="add_product.html">
+          <button class="btn btn_l flex row centered ">Agregar productos 
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </a>
+    </div>
+    <div class="products__container"> -->
+   
+     <!--  <div class="product__card">
+        <div class="product__img">
+          <img src="../assets/consolas-1.png" alt="consolas_1">
+          <div class="icon__container"><button class="btn btn_xs">
+              <span class="material-symbols-outlined white">
+                edit
+              </span>
+            </button>
+            <button class="btn btn_xs">
+              <span class="material-symbols-outlined white">
+                delete
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="product__data">
+          <h2 class="data__title">Consola1</h2>
+          <h2 class="flex row centered"><span class="material-symbols-outlined price">attach_money</span>Precio</h2>
+          <h5>id<p>#6fa1ca99-a92b-4d2a-aac2-7c7977119ebc</p>
+          </h5>
+          <a href="" class="blue_anchor"><button class="btn">ver producto</button></a>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem consequatur dolorum voluptates co</p>
+        </div>
+      </div> -->

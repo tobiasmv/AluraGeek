@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/button.css">
+  <link rel="stylesheet" href="../assets/css/form.css">
+  <link rel="stylesheet" href="../assets/css/menu.css">
+  <link rel="stylesheet" href="../assets/css/banner.css">
+  <link rel="stylesheet" href="../assets/css/products.css">
+  <link rel="stylesheet" href="../assets/css/contact.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <title>Desafio Alura Geek - Ver Producto</title>
+</head>
+
+<body>
+
+  <header class="header__back">
+    <div class="header">
+      <button class="btn btn_s menu__btn" data-menuOpen>
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <img src="../assets/Logo.svg" alt="logo" class="logo">
+
+      <div class="search__container">
+        <div class="input__container">
+          <input type="search" id="search" name="search" class="search" placeholder="Que desea buscar?"
+            data-type="search">
+          <label class="search__label" for="search">Que desea buscar?</label>
+        </div>
+        <button class="btn btn_s">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </div>
+
+
+      <div class="login">
+        <button class="btn btn_l flex  centered login__open" data-loginOpen><span
+            class="material-symbols-outlined">login</span>
+          Ingresar
+        </button>
+      </div>
+    </div>
+    <div class="status">
+      <P>Bienvenido Administrador</P>
+    </div>
+  </header>
+  <nav class="menu">
+
+    <div class="menu__nav menu__nav__back_1">
+      <div class="menu__nav menu__nav__back_2">
+        <div class="menu__nav menu__nav__back_3">
+          <button class="btn close__btn" data-menuClose><span
+              class="material-symbols-outlined">arrow_back_ios</span></button>
+          <img src="../assets/Logo.svg" class="menu__nav__logo" alt="logo">
+          <ul class="list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Acceso</a></li>
+            <li><a href="all_products.html">Productos</a></li>
+            <li><a href="add_product.html">Agregar Productos</a></li>
+            <li class="list__dropdown"><span class="dropdown">Informacion Adicional</span>
+              <ul class="list__dropdown-content">
+                <li><a href="">Quienes somos</a></li>
+                <li><a href="">Política de Privacidad</a></li>
+                <li><a href="">Programa de fidelidad</a></li>
+                <li><a href="">Nuestras Tiendas</a></li>
+                <li><a href="">Quiero ser franquiciado</a></li>
+                <li><a href="">Anuncie aquí</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="product__container" data-ProductView id="producto">
+
+  </section>
+  <section class="contact__container">
+    <div class="contact__info">
+      <img src="../assets/Logo.svg" alt="contact__logo" class="logo" />
+      <a href="">Quienes somos</a>
+      <a href="">Política de Privacidad</a>
+      <a href="">Programa de fidelidad</a>
+      <a href="">Nuestras Tiendas</a>
+      <a href="">Quiero ser franquiciado</a>
+      <a href="">Anuncie aquí</a>
+    </div>
+    <div class="form__container">
+      <h2 class="title_xl">Hable con nosotros</h2>
+      <form action="#" class="contact__form" data-type="contact">
+        <div class="input__container">
+          <input name="contact" id="contact" class="input" type="text" placeholder="Nombre" data-contact />
+          <label class="input__label" for="contact">Nombre</label>
+        </div>
+        <div class="input__container ">
+          <textarea class="textarea textarea__container" name="message" id="message" placeholder="Escribe tu mensaje"
+            data-message></textarea>
+          <label class="textarea__label" for="description">Escribe tu mensaje</label>
+        </div>
+      </form>
+      <button class="btn  btn_blue btn_xxl">Enviar mensaje</button>
+    </div>
+  </section>
+
+  <hr>
+
+  <footer class="footer">
+    <p>Desarrollado por Tobias M. Vera
+      <span class="material-symbols-outlined footer-symbols">
+        copyright
+      </span>2023
+    </p>
+  </footer>
+
+  <div class="login__modal" data-modal>
+
+    <div class="login__content-back">
+      <div class="login__content">
+        <button class="close__btn close" data-loginClose><span
+            class="material-symbols-outlined close">close</span></button>
+
+
+        <h1 class="title_xl">Iniciar Sesión</h1>
+        <form action="#" class="column center" data-loginForm>
+          <div class="input__container">
+            <input name="email" id="email" class="input" type="email" placeholder="Escriba su correo electrónico"
+              required data-type="email" />
+            <label class="input__label login__label" for="email">Escriba su correo electrónico</label>
+          </div>
+          <div class="input__container">
+            <input name="password" id="password" class="input" type="password" placeholder="Escriba su contraseña"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+              title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
+              required data-type="password" />
+            <label class="input__label login__label" for="password">Escriba su contraseña</label>
+          </div>
+
+          <button class="btn btn_xl btn_blue" data-type="loginBtn">Ingresar</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="../menu.js"></script>
+<script src="../script.js"></script>
+<script type="module" src="../controllers/productView.js"></script>
+
+
+
+
+</html>

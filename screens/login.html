@@ -10,18 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/header.css">
-  <link rel="stylesheet" href="../assets/css/header/headerLogo.css">
-  <link rel="stylesheet" href="../assets/css/btn/button.css">
+ 
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/normalize.css">
   <link rel="stylesheet" href="../assets/css/menu/menu.css">
   <link rel="stylesheet" href="../assets/css/menu/menuNav.css">
+  <link rel="stylesheet" href="../assets/css/btn/button.css">
   <link rel="stylesheet" href="../assets/css/menu/menuLogo.css">
   <link rel="stylesheet" href="../assets/css/menu/menuList.css">
-  <link rel="stylesheet" href="../assets/css/banner/banner.css">
-  <link rel="stylesheet" href="../assets/css/products/products.css">
-  <link rel="stylesheet" href="../assets/css/footer.css">
-  <link rel="stylesheet" href="../assets/css/form.css">
+  <link rel="stylesheet" href="../styles.css">
   <title>Desafio Alura Geek - Login Screen</title>
 </head>
 
@@ -74,39 +71,47 @@
       </div>
     </div>
   </nav>
-  <main class="container column center">
-    <section class="card">
-      <h1 class="card__title">Iniciar Sesión</h1>
-      <form
-        action="#"
-        class="column center"
-      ><div class="input__container">
-        <input
-          name="email"
-          id="email"
-          class="input"
-          type="email"
-          placeholder="Escriba su correo electrónico"
-          data-email
-        />
-        <label class="input__label" for="email">Escriba su correo electrónico</label>
-      </div><div class="input__container">
-        <input
-          name="password"
-          id="password"
-          class="input"
-          type="password"
-          placeholder="Escriba su contraseña"
-          data-password
-        />
-        <label class="input__label" for="password">Escriba su contraseña</label>
-      </div>
-    
-       
-      </form>
-      <button class="btn btn_xl btn_blue">Ingresar</button>
-      </section>
-  </main>
+  <div >
+    <div class="login__content-back">
+      <div class="login__content ">
+        <button class="close__btn close" data-loginClose><span class="material-symbols-outlined close">close</span></button>
+        
+
+<h1 class="card__title">Iniciar Sesión</h1>
+              <form
+                action="#"
+                class="column center" data-loginForm
+              ><div class="input__container">
+                <input
+                  name="email"
+                  id="email"
+                  class="input"
+                  type="email"
+                  placeholder="Escriba su correo electrónico"
+                  required
+                  data-type="email"
+                />
+                <label class="input__label login__label" for="email">Escriba su correo electrónico</label>
+              </div><div class="input__container">
+                <input
+                  name="password"
+                  id="password"
+                  class="input"
+                  type="password"
+                  placeholder="Escriba su contraseña"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
+                  required
+                  data-type="password"
+                />
+                <label class="input__label login__label" for="password">Escriba su contraseña</label>
+              </div>
+
+
+              </form>
+              <button class="btn btn_xl btn_blue" data-type="loginBtn">Ingresar</button>
+              </div>
+    </div>
+</div>
 
 
   <section class="container footer">
